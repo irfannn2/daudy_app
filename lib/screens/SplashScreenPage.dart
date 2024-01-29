@@ -2,9 +2,8 @@ import 'dart:async';
 import 'package:daudy_app/screens/LoginPage.dart';
 import 'package:flutter/material.dart';
 
-
 class SplashScreenPage extends StatefulWidget {
-  const SplashScreenPage({super.key});
+  const SplashScreenPage({Key? key}) : super(key: key);
 
   @override
   _SplashScreenPageState createState() => _SplashScreenPageState();
@@ -29,13 +28,15 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 0, 0, 0),
       body: Center(
-        child: Image.asset(
-          'assets/logo.png',
-          height: 150,
-          // You can set other properties like width, alignment, etc.
+        child: Container(
+          margin: EdgeInsets.symmetric(horizontal: 20.0), // Adjust the gap as needed
+          child: Image.asset(
+            'assets/logo.png',
+            height: 150,
+            // You can set other properties like width, alignment, etc.
+          ),
         ),
       ),
     );
   }
 }
-
